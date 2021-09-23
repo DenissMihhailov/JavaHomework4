@@ -13,11 +13,14 @@ import java.util.Scanner;
  * @author krasa
  */
 public class JavaHomework4 {
-
+public static final String ANSI_RESET = "\u001B[0m";
+public static final String ANSI_RED = "\u001B[31m";
+public static final String ANSI_GREEN = "\u001B[32m";
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
         System.out.println("*ПРОГРАММА-ТЕСТ ДЛЯ ПРОВЕРКИ ЗНАНИЯ ТАБЛИЦЫ УНОЖЕНИЯ*");
         System.out.println("------------------------------------------------------");
@@ -30,10 +33,10 @@ public class JavaHomework4 {
             System.out.printf("%d*%d=",testNum1,testNum2);
             int answer= scanner.nextInt();
             if(answer==example){
-                System.out.println("*ПРАВИЛЬНО*");
+                System.out.println(ANSI_GREEN + "*ПРАВИЛЬНО*" + ANSI_RESET);
                 attempt++;
             }else{
-                System.out.println("*ОШИБКА*");
+                System.out.println(ANSI_RED + "*ОШИБКА*" + ANSI_RESET);
                 
             }
                
