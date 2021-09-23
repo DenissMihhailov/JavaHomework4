@@ -23,9 +23,22 @@ public class JavaHomework4 {
         System.out.println("------------------------------------------------------");
         int max=1, min=10, attempt=0;
         Random random = new Random();
-        int testNum1 = random.nextInt(max - min + 1)+min;
-        int testNum2 = random.nextInt(max - min + 1)+min;
         for(int i=0;i<5;i++){
+            int testNum1 = random.nextInt(max - min + 1)+min;
+            int testNum2 = random.nextInt(max - min + 1)+min;
+            int example=testNum1*testNum2;
+            System.out.printf("%d*%d=",testNum1,testNum2);
+            int answer= scanner.nextInt();
+            if(answer==example){
+                System.out.println("*ПРАВИЛЬНО*");
+                attempt++;
+                continue;
+            }else{
+                System.out.println("*ОШИБКА*");
+                continue;
+            }
+               
+                
             
         }
     }
