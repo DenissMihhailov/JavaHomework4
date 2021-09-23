@@ -21,7 +21,7 @@ public class JavaHomework4 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("*ПРОГРАММА-ТЕСТ ДЛЯ ПРОВЕРКИ ЗНАНИЯ ТАБЛИЦЫ УНОЖЕНИЯ*");
         System.out.println("------------------------------------------------------");
-        int max=1, min=10, attempt=0;
+        int max=10, min=1, attempt=0;
         Random random = new Random();
         for(int i=0;i<5;i++){
             int testNum1 = random.nextInt(max - min + 1)+min;
@@ -32,15 +32,25 @@ public class JavaHomework4 {
             if(answer==example){
                 System.out.println("*ПРАВИЛЬНО*");
                 attempt++;
-                continue;
             }else{
                 System.out.println("*ОШИБКА*");
-                continue;
+                
             }
                
                 
             
         }
-    }
+        switch (attempt) {
+            case 5:
+                System.out.println("Молодец!");
+                break;
+            case 4: case 3:
+                System.out.println("Надо бы еще поучить!");
+                break;
+            default:
+                System.out.println("Срочно нужно учить таблицу умножения!");
+                break;
+        }
+    }    
     
 }
